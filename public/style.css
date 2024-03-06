@@ -1,0 +1,231 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    flex: 1;
+    margin-top: 5rem;
+}
+
+.navbar {
+    height: 4rem;
+    background-color: white;
+
+}
+
+.fa-hotel {
+    color: #fe424d;
+
+}
+
+.fa-hotel:hover {
+    font-size: 20px;
+}
+
+.nav-link a {
+    color: #222222 !important;
+}
+
+.footer {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 6rem;
+    background-color: #f6f2f2;
+    width: 100%;
+}
+
+.social {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: baseline;
+    /* align-content: baseline; */
+}
+
+.social a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    width: 100%;
+}
+
+.social i {
+    font-size: 20px;
+}
+
+.terms a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.listing-card {
+    border: none !important;
+    /* margin-right: 2rem; */
+    margin-top: 1rem;
+}
+
+.card-img-top {
+    border-radius: 10px;
+    width: 100% !important;
+    object-fit:cover;
+}
+
+.card-body {
+    padding: 0px;
+    margin: 10px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.4;
+    background-color: white;
+}
+
+.show-image {
+    height: 40vh;
+    border-radius: 10px;
+    ;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    background-color: #fe424d !important;
+    border: none;
+}
+
+.group {
+    position: relative;
+}
+
+.group>label {
+    padding: 0 0.2em;
+    position: absolute;
+    top: -0.5em;
+    left: 1em;
+    background-color: white;
+}
+.group>input{
+    padding:0.8em;
+  border-radius: 0.5em;
+  border: 2px solid lightblue;
+  outline:none;
+
+}
+
+.signup{
+    /* border: 2px solid rgb(0, 166, 255); */
+    width: 50rem;
+    height: 25.5rem;
+    border-radius: 50px ;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 4px 5px gray;
+}
+.login{
+    /* border: 2px solid rgb(0, 166, 255); */
+    width: 35rem;
+    height: 20rem;
+    border-radius: 50px ;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 4px 5px gray;
+}
+.flash{
+    margin: auto;
+}
+textarea{
+    resize: none;
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.filter{
+    text-align: center;
+    opacity: 0.5;
+}
+.filters a{
+    color: black;
+    text-decoration: none;
+}
+.filter:hover{
+    opacity:1;
+    text-decoration: underline;
+}
+.filter>div{
+    font-size: 1.4rem;
+}
+.filter>p{
+    font-size: 1rem;
+}
+.price{
+    display: inline;
+}
+.pricewithtax{
+    display: none;
+}
+.form-switch{
+    /* border: 2px solid rgb(63, 57, 57); */
+    /* padding: 0 3rem !important; */
+    border-radius: 100px;
+    margin-left: 25rem;
+    height: 38px;
+    width: 255px;
+    box-shadow: 2px 2px 2px 0px black;
+}
+.form-check-input{
+    font-size: 25px;
+    margin: 4px 0px !important;
+    padding: 0px !important;
+}
+.form-check-label{
+    font-size: 20px;
+    margin: 0 10px !important;
+    padding: 0 !important;
+}
+#search{
+    color: white;
+}
+.d-flex>input{
+    width: 45rem;
+}
+.delete{
+    background-color: #222222 !important;
+}
