@@ -229,3 +229,8 @@ textarea{
 .delete{
     background-color: #222222 !important;
 }
+
+#map { 
+  height: 50vh;
+  width: 50vw;
+}

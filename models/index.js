@@ -46,6 +46,17 @@ const listingschema=new schema({
     category:{
         type:String,
         enum:["lakes","mountain","castles","farms","arctic","beach"]
+    },
+    geometry:{
+        type:{
+        type: String, // Don't do `{ location: { type: String } }`
+        enum: ['Point'], // 'location.type' must be 'Point'
+        required: true
+      },
+      coordinates: {
+        type: [Number],
+        required: true
+      }
     }
 });
 

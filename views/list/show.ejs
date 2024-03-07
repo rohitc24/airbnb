@@ -1,6 +1,10 @@
 <% layout("layoutss/boilerplate") %>
 
     <body>
+        <script>
+            let maptoken = "<%= process.env.MAP_TOKEN%>";
+            let item =<%- JSON.stringify(item) %>;
+        </script>
         <div class="row">
             <div class="col-8 offset-2">
 
@@ -26,9 +30,9 @@
                                     <br>
                                     <b>Country: </b>
                                     <%= item.country %>
-                                    <br>
-                                    <b>Category:</b>
-                                    <%= item.category %>
+                                        <br>
+                                        <b>Category:</b>
+                                        <%= item.category %>
                     </p>
                 </div>
             </div>
@@ -55,8 +59,8 @@
                             <div>
                                 <legend>Rating:</legend>
                                 <fieldset class="starability-slot">
-                                    <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1"
-                                        checked aria-label="No rating." />
+                                    <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]"
+                                        value="1" checked aria-label="No rating." />
                                     <input type="radio" id="first-rate1" name="review[rating]" value="1" />
                                     <label for="first-rate1" title="Terrible">1 star</label>
                                     <input type="radio" id="first-rate2" name="review[rating]" value="2" />
@@ -92,7 +96,7 @@
                                                     <%= review.author.username %>
                                                 </div>
                                                 <p class="starability-result" data-rating="<%= review.rating %>">
-                                                  </p>
+                                                </p>
                                                 <div class="card-text">
                                                     <%= review.comment %>
                                                 </div>
@@ -105,6 +109,13 @@
                                         </div>
                                         <% } %>
                                 </div>
+                                <% } %>
+                                    <br>
+                                    <div class="offset-2">
+                                        <div style="font-size: 20px;"><b>Where you will be:</b></div>
+                                        <br>
+                                        <div id="map"></div>
+                                    </div>
                             </div>
-                            <% } %>
+                            <script src="/map.js"></script>
     </body>

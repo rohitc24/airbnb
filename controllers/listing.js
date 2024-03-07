@@ -1,4 +1,7 @@
 const listing=require("../models/index");
+const mbxgeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+const maptoken=process.env.MAP_TOKEN;
+const geocodingClient = mbxgeocoding({ accessToken:maptoken });
 
 //home
 module.exports.home=async (req, res) => {
@@ -65,7 +68,16 @@ module.exports.add=async (req, res) => {
     let filename=req.file.filename;
     // console.log(req.file);
     // console.log(req.body.list);
+    let response=await geocodingClient.forwardGeocode({
+        query: req.body.list.location,
+        limit: 1
+      })
+        .send();
     const List = new listing(req.body.list);
+   
+        // console.log(response.body.features[0].geometry);
+        // res.send("edit")
+    List.geometry=response.body.features[0].geometry;
     
     List.owner=req.user._id;
     List.image.url=url;
