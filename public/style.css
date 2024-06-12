@@ -119,7 +119,7 @@ body {
 .show-image {
     height: 40vh;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .buttons {
@@ -233,4 +233,22 @@ textarea{
 #map { 
   height: 50vh;
   width: 50vw;
+}
+
+@media(max-width:767.5px) {
+    .navbar-collapse{
+        z-index: 10;
+        background-color: #d1c5c5;
+      }
+      .d-flex>input{
+        width: 20rem;
+    }
+    .container{
+        margin-top: 12.5rem;
+    }
+}
+@media(max-width:429px){
+    .d-flex>input{
+        width: 10rem;
+    }
 }

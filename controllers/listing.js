@@ -38,7 +38,9 @@ module.exports.editform=async (req, res) => {
     if(!item){
         req.flash("error","list is not exist or deleted");
         res.redirect(`/listings/show/${id}`);
-    }    
+    }  
+    let originalimage=item.image.url;
+    originalimage=originalimage.replace("/upload","/upload/h_250,w_250")  
     res.render("list/edit.ejs", { item,originalimage });
 }
 
