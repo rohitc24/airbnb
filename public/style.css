@@ -18,11 +18,12 @@ body {
 
 .fa-hotel {
     color: #fe424d;
+    width: 20px;
 
 }
 
 .fa-hotel:hover {
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .nav-link a {
@@ -185,6 +186,9 @@ textarea{
     color: black;
     text-decoration: none;
 }
+.filter a:visited{
+    text-decoration: underline;
+}
 .filter:hover{
     opacity:1;
     text-decoration: underline;
@@ -241,7 +245,8 @@ textarea{
         background-color: #d1c5c5;
       }
       .d-flex>input{
-        width: 20rem;
+        margin-left: 2.5rem;
+        width: 30rem;
     }
     .container{
         margin-top: 12.5rem;
@@ -249,6 +254,14 @@ textarea{
 }
 @media(max-width:429px){
     .d-flex>input{
-        width: 10rem;
+        margin-left: 10rem;
+        width: 15rem;
     }
+}
+
+.right{
+    width: 250px !important;
+}
+.explore{
+    width: 2px !important;
 }

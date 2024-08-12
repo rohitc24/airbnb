@@ -13,5 +13,5 @@ const map = new mapboxgl.Map({
  const marker1 = new mapboxgl.Marker({color:"red"})
  .setLngLat(item.geometry.coordinates)
  .setPopup(new mapboxgl.Popup({offset: 25, className: 'my-class'})
- .setHTML(`<h4>${item.title}</h4><h1>After booking location will be shared</h1>`))
+ .setHTML(`<h4>${item.title}</h4><p>After booking location will be shared</p>`))
  .addTo(map);

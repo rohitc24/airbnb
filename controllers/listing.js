@@ -49,13 +49,20 @@ module.exports.edit=async (req, res) => {
     let { id } = req.params;
     // console.log(req.body.list);
     let List=await listing.findByIdAndUpdate(id, (req.body.list));
-    if(typeof req.file!==undefined){
+    if(typeof req.file!=="undefined"){
     let url=req.file.path;
     let filename=req.file.filename;
     List.image.url=url;
     List.image.filename=filename;
     await List.save();
     }
+    let response=await geocodingClient.forwardGeocode({
+        query: req.body.list.location,
+        limit: 1
+      })
+        .send();
+    List.geometry=response.body.features[0].geometry;
+    await List.save();
     req.flash("success","List is updated Successfully");
     res.redirect(`/listings/show/${id}`);
 }

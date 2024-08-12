@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-md bg-body-light border-bottom fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings/home">
-        <i class="fa-solid fa-hotel"></i>
-      </a>
+        <a class="navbar-brand" href="/listings/home">
+          <i class="fa-solid fa-hotel"></i>
+        </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav explore">
           <a class="nav-link active" aria-current="page" href="/listings/home">Explore</a>
         </div>
         <!-- <div class="container-fluid ms-auto"> -->
@@ -16,7 +16,7 @@
           <button class="btn btn-outline-success" type="submit" id="search">Search</button>
         </form>
         <!-- </div> -->
-        <div class="navbar-nav ms-auto">
+        <div class="navbar-nav ms-auto right">
           <a class="nav-link" href="/listings/add">Add Listings</a>
           <% if (!currentuser) { %>
             <a href="/signup" class="nav-link"><b>Sign up</b></a>

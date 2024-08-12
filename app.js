@@ -51,8 +51,8 @@ main().then(() => {
 //     console.log("error occured",err);
 // })
 const sessionoptions={
-    // store:store,
-    secret:process.env.SECRET,
+    store:store,
+    // secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
@@ -95,7 +95,7 @@ app.all("*", (req, res, next) => {
 })
 //error handler
 app.use((err, req, res, next) => {
-    let { status = 500, message = "somethng went wrong" } = err;
+    // let { status = 500, message = "somethng went wrong" } = err;
     res.render("list/error.ejs", { err });
     // res.status(status).send(message);
 })
